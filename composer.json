@@ -3,7 +3,7 @@
     "description": "Create programmatically a sitemap for your Laravel website",
     "keywords": ["laravel", "sitemap", "laravel-sitemap"],
     "type": "library",
-    "version": "0.0.0",
+    "version": "0.0.1",
     "require": {
         "php": "^7.2",
         "illuminate/support": "^7.0",
