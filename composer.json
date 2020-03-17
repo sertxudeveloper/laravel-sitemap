@@ -19,22 +19,12 @@
     "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
-            "SertxuDeveloper\\Translatable\\": "src/"
+            "SertxuDeveloper\\Sitemap\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "SertxuDeveloper\\Translatable\\Tests\\": "tests/"
-        }
-    },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "SertxuDeveloper\\Translatable\\TranslatableServiceProvider"
-            ],
-            "aliases": {
-                "Translatable": "SertxuDeveloper\\Translatable\\Facades\\Translatable"
-            }
+            "SertxuDeveloper\\Sitemap\\Tests\\": "tests/"
         }
     }
 }
