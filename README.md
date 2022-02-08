@@ -35,4 +35,4 @@ $sitemap->writeToFile(public_path('sitemap.xml'))
 ```
 
 <br><br>
-Copyright (c) 2019 Sertxu Developer
+Copyright © 2019 Sertxu Developer
