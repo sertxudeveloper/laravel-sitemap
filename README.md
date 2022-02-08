@@ -4,8 +4,8 @@
 **Generate a sitemap of your app**
 
 ## Requirements
-  - PHP >= 7.2
-  - Laravel >= 6.0
+  - PHP >= 7.4
+  - Laravel >= 8.0
 
 ## Installation
 You can install this package using Composer.
