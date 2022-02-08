@@ -1,1 +1,4 @@
-.idea/
+/node_modules
+/vendor
+phpunit
+composer.lock
