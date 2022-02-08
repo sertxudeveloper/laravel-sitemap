@@ -5,7 +5,7 @@
 
 ## Requirements
   - PHP >= 7.4
-  - Laravel >= 8.0
+  - Laravel >= 8.x
 
 ## Installation
 You can install this package using Composer.
