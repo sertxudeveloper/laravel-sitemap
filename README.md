@@ -5,7 +5,7 @@
 
 ![](https://img.shields.io/github/v/release/sertxudeveloper/laravel-sitemap) ![](https://img.shields.io/github/license/sertxudeveloper/laravel-sitemap) ![](https://img.shields.io/librariesio/github/sertxudeveloper/laravel-sitemap) ![](https://img.shields.io/github/repo-size/sertxudeveloper/laravel-sitemap) ![](https://img.shields.io/packagist/dt/sertxudeveloper/laravel-sitemap) ![](https://img.shields.io/github/issues/sertxudeveloper/laravel-sitemap) ![](https://img.shields.io/packagist/php-v/sertxudeveloper/laravel-sitemap)
 
-**Generate a sitemap of your app**
+Generate a sitemap of your Laravel app.
 
 ## Requirements
   - PHP >= 7.4
