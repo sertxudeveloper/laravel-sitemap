@@ -34,7 +34,7 @@
     "autoload-dev": {
         "psr-4": {
             "SertxuDeveloper\\Sitemap\\Tests\\": "tests/",
-            "SertxuDeveloper\\LockScreen\\Tests\\Database\\Factories\\": "tests/database/factories"
+            "SertxuDeveloper\\Sitemap\\Tests\\Database\\Factories\\": "tests/database/factories"
         }
     },
     "scripts": {
