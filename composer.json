@@ -1,22 +1,31 @@
 {
     "name": "sertxudeveloper/laravel-sitemap",
     "description": "Create programmatically a sitemap for your Laravel website",
-    "keywords": ["laravel", "sitemap", "laravel-sitemap"],
-    "type": "library",
-    "version": "1.4.0",
-    "require": {
-        "php": "^7.4|^8.0",
-        "illuminate/support": "^8.0|^9.0",
-        "nesbot/carbon": "^2.0"
-    },
+    "keywords": [
+        "laravel",
+        "sitemap",
+        "laravel-sitemap"
+    ],
+    "homepage": "https://github.com/sertxudeveloper/laravel-sitemap",
     "license": "MIT",
     "authors": [
         {
             "name": "Sertxu Developer",
-            "email": "dev.sertxu@gmail.com"
+            "email": "dev.sertxu@gmail.com",
+            "role": "Developer"
         }
     ],
-    "minimum-stability": "dev",
+    "require": {
+        "php": "^7.4|^8.0",
+        "illuminate/support": "^8.0|^9.0",
+        "illuminate/database": "^8.0|^9.0",
+        "nesbot/carbon": "^2.0"
+    },
+    "require-dev": {
+        "nunomaduro/collision": "^6.0",
+        "orchestra/testbench": "^7.5",
+        "phpunit/phpunit": "^9.5"
+    },
     "autoload": {
         "psr-4": {
             "SertxuDeveloper\\Sitemap\\": "src/"
@@ -24,8 +33,16 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "SertxuDeveloper\\Sitemap\\Tests\\": "tests/"
+            "SertxuDeveloper\\Sitemap\\Tests\\": "tests/",
+            "SertxuDeveloper\\LockScreen\\Tests\\Database\\Factories\\": "tests/database/factories"
         }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+    },
+    "config": {
+        "sort-packages": true
     },
     "extra": {
         "laravel": {
@@ -33,5 +50,7 @@
                 "SertxuDeveloper\\Sitemap\\SitemapServiceProvider"
             ]
         }
-    }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
