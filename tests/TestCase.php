@@ -2,20 +2,14 @@
 
 namespace SertxuDeveloper\Sitemap\Tests;
 
-use Illuminate\Contracts\Session\Session;
 use Illuminate\Foundation\Application;
-use Illuminate\Http\Request;
-use Illuminate\Routing\Router;
 use Orchestra\Testbench\TestCase as Orchestra;
 use SertxuDeveloper\Sitemap\SitemapServiceProvider;
-use Symfony\Component\HttpFoundation\Request as SymfonyRequest;
 
 class TestCase extends Orchestra
 {
     /**
      * Define database migrations.
-     *
-     * @return void
      */
     protected function defineDatabaseMigrations(): void {
         $this->loadLaravelMigrations();

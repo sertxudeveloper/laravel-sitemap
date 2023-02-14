@@ -2,53 +2,46 @@
 
 namespace SertxuDeveloper\Sitemap;
 
-class Alternate {
+class Alternate
+{
+    /** @var string */
+    public $locale;
 
-  /** @var string */
-  public $locale;
+    /** @var string */
+    public $url;
 
-  /** @var string */
-  public $url;
+    /**
+     * Create a new Alternate.
+     */
+    public function create(string $url, string $locale = ''): self {
+        return new static($url, $locale);
+    }
 
-  /**
-   * Create a new Alternate.
-   *
-   * @param string $url
-   * @param string $locale
-   * @return Alternate
-   */
-  public function create(string $url, string $locale = ''): self {
-    return new static($url, $locale);
-  }
+    /**
+     * Alternate constructor.
+     *
+     * @param  string  $locale
+     */
+    public function __construct(string $url, $locale = '') {
+        $this->setUrl($url);
+        $this->setLocale($locale);
+    }
 
-  /**
-   * Alternate constructor.
-   *
-   * @param string $url
-   * @param string $locale
-   */
-  public function __construct(string $url, $locale = '') {
-    $this->setUrl($url);
-    $this->setLocale($locale);
-  }
+    /**
+     * @return $this
+     */
+    public function setLocale(string $locale = '') {
+        $this->locale = $locale;
 
-  /**
-   * @param string $locale
-   *
-   * @return $this
-   */
-  public function setLocale(string $locale = '') {
-    $this->locale = $locale;
-    return $this;
-  }
+        return $this;
+    }
 
-  /**
-   * @param string $url
-   *
-   * @return $this
-   */
-  public function setUrl(string $url = ''){
-    $this->url = $url;
-    return $this;
-  }
+    /**
+     * @return $this
+     */
+    public function setUrl(string $url = '') {
+        $this->url = $url;
+
+        return $this;
+    }
 }
