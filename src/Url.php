@@ -5,103 +5,97 @@ namespace SertxuDeveloper\Sitemap;
 use Carbon\Carbon;
 use DateTime;
 
-class Url {
+class Url
+{
+    const CHANGE_FREQUENCY_ALWAYS = 'always';
 
-  const CHANGE_FREQUENCY_ALWAYS = 'always';
-  const CHANGE_FREQUENCY_HOURLY = 'hourly';
-  const CHANGE_FREQUENCY_DAILY = 'daily';
-  const CHANGE_FREQUENCY_WEEKLY = 'weekly';
-  const CHANGE_FREQUENCY_MONTHLY = 'monthly';
-  const CHANGE_FREQUENCY_YEARLY = 'yearly';
-  const CHANGE_FREQUENCY_NEVER = 'never';
+    const CHANGE_FREQUENCY_HOURLY = 'hourly';
 
-  /** @var string */
-  public $url = '';
+    const CHANGE_FREQUENCY_DAILY = 'daily';
 
-  /** @var \Carbon\Carbon */
-  public $lastModificationDate;
+    const CHANGE_FREQUENCY_WEEKLY = 'weekly';
 
-  /** @var string */
-  public $changeFrequency;
+    const CHANGE_FREQUENCY_MONTHLY = 'monthly';
 
-  /** @var float */
-  public $priority = 0.8;
+    const CHANGE_FREQUENCY_YEARLY = 'yearly';
 
-  /** @var array */
-  public $alternates = [];
+    const CHANGE_FREQUENCY_NEVER = 'never';
 
-  /**
-   * Url constructor.
-   *
-   * @param string $url
-   */
-  public function __construct(string $url) {
-    $this->url = $url;
-    $this->lastModificationDate = Carbon::now();
-    $this->changeFrequency = static::CHANGE_FREQUENCY_DAILY;
-  }
+    /** @var string */
+    public $url = '';
 
-  /**
-   * Create a new Url
-   *
-   * @param string $url
-   * @return Url
-   */
-  public static function create(string $url): self {
-    return new static($url);
-  }
+    /** @var \Carbon\Carbon */
+    public $lastModificationDate;
 
-  /**
-   * Set the address
-   *
-   * @param string $url
-   * @return Url
-   */
-  public function setUrl(string $url): Url {
-    $this->url = $url;
-    return $this;
-  }
+    /** @var string */
+    public $changeFrequency;
 
-  /**
-   * Set the last modification date
-   *
-   * @param \DateTime $lastModificationDate
-   * @return Url
-   */
-  public function setLastModificationDate(DateTime $lastModificationDate): Url {
-    $this->lastModificationDate = $lastModificationDate;
-    return $this;
-  }
+    /** @var float */
+    public $priority = 0.8;
 
-  /**
-   * Set the change frequency
-   * @param string $changeFrequency
-   * @return Url
-   */
-  public function setChangeFrequency(string $changeFrequency): Url {
-    $this->changeFrequency = $changeFrequency;
-    return $this;
-  }
+    /** @var array */
+    public $alternates = [];
 
-  /**
-   * Set the priority
-   * @param float $priority
-   * @return Url
-   */
-  public function setPriority(float $priority): Url {
-    $this->priority = max(0, min(1, $priority));
-    return $this;
-  }
+    /**
+     * Url constructor.
+     */
+    public function __construct(string $url) {
+        $this->url = $url;
+        $this->lastModificationDate = Carbon::now();
+        $this->changeFrequency = static::CHANGE_FREQUENCY_DAILY;
+    }
 
-  /**
-   * Add alternate to the URL
-   *
-   * @param string $url
-   * @param string $locale
-   * @return $this
-   */
-  public function addAlternate(string $url, string $locale = '') {
-    $this->alternates[] = new Alternate($url, $locale);
-    return $this;
-  }
+    /**
+     * Create a new Url
+     */
+    public static function create(string $url): self {
+        return new static($url);
+    }
+
+    /**
+     * Set the address
+     */
+    public function setUrl(string $url): Url {
+        $this->url = $url;
+
+        return $this;
+    }
+
+    /**
+     * Set the last modification date
+     */
+    public function setLastModificationDate(DateTime $lastModificationDate): Url {
+        $this->lastModificationDate = $lastModificationDate;
+
+        return $this;
+    }
+
+    /**
+     * Set the change frequency
+     */
+    public function setChangeFrequency(string $changeFrequency): Url {
+        $this->changeFrequency = $changeFrequency;
+
+        return $this;
+    }
+
+    /**
+     * Set the priority
+     */
+    public function setPriority(float $priority): Url {
+        $this->priority = max(0, min(1, $priority));
+
+        return $this;
+    }
+
+    /**
+     * Add alternate to the URL
+     *
+     * @return $this
+     */
+    public function addAlternate(string $url, string $locale = '') {
+        $this->alternates[] = new Alternate($url, $locale);
+
+        return $this;
+    }
 }
