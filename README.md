@@ -1,3 +1,7 @@
+> [!Warning]
+> This package is no longer actively maintained, feel free to submit a pull request or create a fork.<br>
+> The project requiring this package has been discontinued.
+
 
 <p align="center"><img src="/art/socialcard.png" alt="Laravel Sitemap by Sertxu Developer"></p>
 
