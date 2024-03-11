@@ -1,5 +1,5 @@
 > [!Warning]
-> This package is no longer actively maintained, feel free to submit a pull request or create a fork.<br>
+> This package is no longer actively maintained, feel free to create a fork if you need it.<br>
 > The project requiring this package has been discontinued.
 
 
